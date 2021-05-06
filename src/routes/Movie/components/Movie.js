@@ -34,7 +34,6 @@ export default function Login(props) {
         admin: user.name
       }
     }).then(response => {
-      console.log('response ==========================', response);
       setMovie('');
       setDirector('');
       setRatings('');
