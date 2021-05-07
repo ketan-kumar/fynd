@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import axios from 'axios';
-import { useHistory } from "react-router-dom";
-import _ from 'lodash';
 
 import Constant from '../../../config/Constant';
 import Header from '../../../component/Header';
@@ -13,7 +11,6 @@ export default function Login(props) {
   const [ratings, setRatings] = useState('');
   const [genre, setGenre] = useState('');
   const [popularity, setPopularity] = useState('');
-  let history = useHistory();
   let user = JSON.parse(localStorage.getItem('user')) || {};
 
   const handleSubmit = (event) => {
@@ -48,10 +45,10 @@ export default function Login(props) {
     <div className="center container">
       <Header/>
       <form onSubmit={handleSubmit}>
-        <div className="row">
-          <label>
-            Movie:
+        <div className="form-group">
+          <label>Movie
             <input
+              className="form-control"
               name="movie"
               type="text"
               placeholder="eg: 3 idot"
@@ -61,10 +58,11 @@ export default function Login(props) {
             />
           </label>
         </div>
-        <div className="row">
+        <div className="form-group">
           <label>
-            Director:
+            Director
             <input
+              className="form-control"
               name="director"
               type="text"
               placeholder="eg: rajkumar hirani"
@@ -74,10 +72,11 @@ export default function Login(props) {
             />
           </label>
         </div>
-        <div className="row">
+        <div className="form-group">
           <label>
-            IMDB Ratings:
+            IMDB Ratings
             <input
+              className="form-control"
               name="ratings"
               type="text"
               placeholder="eg: 8.5"
@@ -87,10 +86,11 @@ export default function Login(props) {
             />
           </label>
         </div>
-        <div className="row">
+        <div className="form-group">
           <label>
-            Genre:
+            Genre
             <input
+              className="form-control"
               name="genre"
               type="text"
               placeholder="eg: Family, Fantasy"
@@ -100,10 +100,11 @@ export default function Login(props) {
             />
           </label>
         </div>
-        <div className="row">
+        <div className="form-group">
           <label>
-            99Popularity:
+            99Popularity
             <input
+              className="form-control"
               name="popularity"
               type="text"
               placeholder="eg: 88"

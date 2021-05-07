@@ -54,10 +54,11 @@ export default function Login(props) {
     <div className="center container">
       <Header/>
       <form onSubmit={handleSubmit}>
-        <div className="row">
+        <div className="form-group">
           <label>
-            Email:
+            Email
             <input
+              className="form-control"
               name="email"
               type="email"
               value={email}
