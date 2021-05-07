@@ -1,6 +1,6 @@
 const constant = {
-  baseUrl: 'http://localhost:',
-  port: 4004,
+  baseUrl: 'https://rel-fynd-api.herokuapp.com',
+  port: '',
 }
 
 export default constant;
