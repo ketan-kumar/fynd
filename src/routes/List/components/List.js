@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import Table from "../../Table/components/Table";
 import Constant from "../../../config/Constant";
+import Header from "../../../component/Header";
 
 function App() {
   const [data, setData] = useState([]);
@@ -157,7 +158,7 @@ function App() {
 
   return (
     <div className="container">
-      {(!_.isEmpty(data)) &&
+      {(!_.isEmpty(data)) ?
         <div className="row">
           <Table
             columns={columns}
@@ -165,6 +166,11 @@ function App() {
             updateMyData={updateMyData}
             handleRowDelete={handleRowDelete}
           />
+        </div>
+        :
+        <div>
+          <Header/>
+          <p className="text-center">No movie find in the database. Please add movie by clicking on movie link!</p>
         </div>
       }
     </div>
